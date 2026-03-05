@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/love-in-one-night/static/css/main.c18b8c6c.css",
+    "main.js": "/love-in-one-night/static/js/main.98d54b7a.js",
+    "static/js/453.dc016ae6.chunk.js": "/love-in-one-night/static/js/453.dc016ae6.chunk.js",
+    "static/media/flyer.jpeg": "/love-in-one-night/static/media/flyer.95564013a26408194bb7.jpeg",
+    "index.html": "/love-in-one-night/index.html",
+    "main.c18b8c6c.css.map": "/love-in-one-night/static/css/main.c18b8c6c.css.map",
+    "main.98d54b7a.js.map": "/love-in-one-night/static/js/main.98d54b7a.js.map",
+    "453.dc016ae6.chunk.js.map": "/love-in-one-night/static/js/453.dc016ae6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c18b8c6c.css",
+    "static/js/main.98d54b7a.js"
+  ]
+}
