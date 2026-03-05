@@ -1,38 +1,213 @@
-.App {
+/* Google Fonts */ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');  
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  animation: zoomBg 20s infinite alternate ease-in-out;
+}
+
+@keyframes zoomBg {
+  from { background-size: 100%; }
+  to { background-size: 110%; }
+}
+
+.overlay {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.9));
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  letter-spacing: 3px;
+}
+
+.tagline {
+  margin-top: 15px;
+  color: #ff3c78;
+  font-size: 1.2rem;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 15px 35px;
+  border-radius: 30px;
+  margin: 10px;
+  text-decoration: none;
+  transition: 0.4s ease;
+}
+
+.primary-btn {
+  background: linear-gradient(45deg, #ff004f, #ff3c78);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ff3c78;
+}
+
+.secondary-btn {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.secondary-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ABOUT SECTION */
+.about {
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.glass-card {
+  max-width: 800px;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.glass-card h2 {
+  margin-bottom: 20px;
+  color: #ff3c78;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.glass-card p {
+  margin-bottom: 15px;
+  line-height: 1.8;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* MOVIE / TRAILER SECTION */
+.movie {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.movie h2 {
+  margin-bottom: 40px;
+  color: #ff3c78;
+}
+
+.video-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+}
+
+/* ONLY ONE SOCIAL BUTTON: Like / Comment */
+.social-buttons {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: #fff;
+  background: linear-gradient(45deg, #ff004f, #ff3c78);
+}
+
+.social-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ff3c78;
+}
+
+/* FLOATING YOUTUBE BUTTON */
+.floating-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #ff0000;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 20px red;
+  transition: 0.3s ease;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.floating-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 25px #ff3c78;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #111;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .video-container iframe {
+    height: 250px;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .primary-btn, .secondary-btn, .social-btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
   }
 }
